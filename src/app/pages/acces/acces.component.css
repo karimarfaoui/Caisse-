@@ -1,4 +1,5 @@
 
+
 .sidebar-toggle:hover .hamburger,.sidebar-toggle:hover .hamburger:after,.sidebar-toggle:hover .hamburger:before{
     background:#3b7ddd}
     .hamburger-right,.hamburger-right:after,.hamburger-right:before{
@@ -66,16 +67,46 @@ li{
     display: flex;
     flex-direction:column;
     justify-content: center;
-    align-items: center;
+    
 
 }
+
+.article{
+    margin: 10px;
+    border: 2px solid black ;
+
+}
+.box{
+    width: 250px;
+    height: 150px;
+}
+
 .style-button{
     background-color: #6c757d ;
     font-weight: bold;
-    font-size: 20px;
     color: black;
         margin-top: 5px;
         margin-bottom: 5px;
-    height: 60px;
-    width: 500px;
+    height: 50px;
+}
+fieldset {
+    background-color: #eeeeee;
+  }
+  
+legend {
+    background-color: #6c757d;
+    color: white;
+    padding: 5px 10px;
+  }
+.check{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+    margin-left: 75px;
+}
+.side{
+    width: 200px;
+    height: 100px;
+    
 }

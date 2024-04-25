@@ -1,7 +1,7 @@
 <div class="d-flex " >   
 
     <span class="align-middle main"><img src="assets/logo.png" alt=""></span>
-    <div class="centered ">Cloture</div>
+    <div class="centered ">Configuration d'acces</div>
   
       <nav id="sidebar" class="sidebar js-sidebar" >
       <div class="sidebar-content js-simplebar">
@@ -112,22 +112,76 @@
       
   </nav>
   
- <div class="container form">
-    <div class="input-group">
+<div class="container form" >
+    <span class=""></span>
+  
+    <div class="group">
+      <div class="input-group">
         <span class="bi bi-person-fill input-group-text" id="inputGroup-sizing-default">
         </span>
-        <input type="text" placeholder="IP SERVEUR" class="form-control input" value="" name="password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
-        </div>
-    <div class="d-flex my-5">
-        <button class="btn btn-lg mx-5 bi bi-card-checklist style-button bare">Tous les rapports</button>
+        <input type="text" placeholder="Caissier" class="form-control input" value="" name="password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+        </div><br>
+        <div class="input-group">
+          <span class="bi bi-shield-lock-fill input-group-text" id="inputGroup-sizing-default">
+          </span>
+          <input type="password" placeholder="Password" class="form-control input" value=""  name="password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
+          </div>  
+    </div> 
+  
+  <div class="">
+       
+    <div class="check ">
+      <span class="" >
         
+        <p-checkbox class="sidebar-link fs-5" value="" label="select All" [(ngModel)]="selectAll" (click)="toggleSelectAll()" > </p-checkbox>
+        <div  *ngFor="let item of checkboxes1">
+          <p-checkbox class="sidebar-link fs-5" label="{{item.title}}"
+          value="" [(ngModel)]="item.selected" (click)="checkboxChanged()">
+        </p-checkbox>
+      </div><br>
+      
+      </span>
+      <section class="m-4 ">
+        <div *ngFor="let item of checkboxes2">
+          <p-checkbox class="sidebar-link fs-5" label="{{item.title}}"
+          value="" [(ngModel)]="item.selected" (click)="checkboxChanged()">
+        </p-checkbox>
+      </div>
+      </section>
+          <div class="">
+            <fieldset class="side mt-5">
+              <legend>Type</legend>
+             
+              <p-checkbox class="fs-5" label="Admin" name="pizza" value="Cheese" ></p-checkbox><br>
+              <p-checkbox class="fs-5" label="Caissier" name="pizza" value="Cheese" ></p-checkbox>
+              </fieldset>
+              <fieldset class="mt-5 mb-5 side" >
+                 
+                  <legend >Etat</legend>
+                  <p-checkbox class="fs-5" label="Libre" name="pizza" value="Cheese" ></p-checkbox><br>
+                  <p-checkbox class="fs-5" label="Occupé" name="pizza" value="Cheese" ></p-checkbox><br>
+              </fieldset>
+          </div>
+          <div>
+           
+          </div>
     </div>
-    <div class="d-flex my-5">
-        <button class="btn btn-lg mx-5 bi bi-x-circle  style-button bare">Quitter</button>
-        
     </div>
-    
-    
-</div>
+    <div class="d-flex justify-content-around  mt-3 d-flex justify-content-center">
+      <button class="btn ms-1 bi bi-info-circle-fill style-button bare">Aide</button>
+      <button class="btn ms-1 bi bi-floppy2-fill style-button bare">Enregistrer</button>
+      <button class="btn ms-1 bi bi-trash-fill style-button bare">Supprimer</button>
+      <button routerLink="/configuration" class="btn ms-1 bi bi-x-circle-fill style-button bare">Fermer</button>
+      <button class="btn ms-1 bi bi-keyboard-fill style-button bare">Clavier</button>
+      
+  </div>
 
     </div>
+    
+
+ 
+
+
+    </div>
+    
+

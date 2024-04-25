@@ -1,23 +1,18 @@
-
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit,} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ok } from 'assert';
 import Keyboard, { SimpleKeyboard } from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
-import Swal from 'sweetalert2';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @Component({
-
-  selector: 'app-home',
+  selector: 'app-stock',
   standalone: true,
-  imports: [NgIf,CommonModule,FormsModule,ReactiveFormsModule
-  ],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'] // Update the path to the correct CSS file
+  imports: [NgIf,CommonModule,FormsModule,ReactiveFormsModule],
+  templateUrl: './stock.component.html',
+  styleUrl: './stock.component.css'
 })
-
-export class HomeComponent implements OnInit{
+export class StockComponent {
   keyboardVisible : boolean = false;
   logIn: boolean = false;
 showKeyboard() {
@@ -52,22 +47,6 @@ showKeyboard() {
     this.areItemsVisible = !this.areItemsVisible;
     console.log(this.areItemsVisible);
   }
-  onSubmit() { 
-    if (this.inputValue === '1234') {
-      Swal.fire({
-        icon: 'success',
-        title: 'Welcome!',
-        showConfirmButton: false,
-        timer: 500      });
-        
-        this.logIn = true;
-    }else {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Password is incorrect!',
-      });
-    }
-  }
+  
 
 }
