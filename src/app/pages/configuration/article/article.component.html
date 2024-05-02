@@ -12,13 +12,13 @@
                     <div class="input-group-prepend">
                           <span class="input-group-text bg" style="background-color: #6c767d;" id="inputGroup-sizing-default">Code Produit</span>
                           </div>
-                        <input type="text" style="background-color: #6c767d;" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        <input type="text" [(ngModel)]="code_pro" style="background-color: #6c767d;" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                      </div>
                   <div class="input-group mt-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" style="background-color: #6c767d;" id="inputGroup-sizing-default">Designation</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Default" style="background-color: #6c767d;" aria-describedby="inputGroup-sizing-default">
+                    <input type="text"  class="form-control" aria-label="Default" style="background-color: #6c767d;" aria-describedby="inputGroup-sizing-default">
                   </div>
                 </div>
              
@@ -170,7 +170,7 @@
     <hr />
     <div class="btn-group footer d-flex justify-content-around"  role="group" aria-label="Basic outlined example">
         <button type="button" class="bi bi-info-circle-fill btn ms-1 style-button">Liste Article</button>
-        <button type="button" class="bi bi-floppy2-fill btn ms-1 style-button" (click)="onSubmit()">Enregister</button>
+        <button type="button" class="bi bi-floppy2-fill btn ms-1 style-button" (click)="submit()">Enregister</button>
         <button type="button" class="bi bi-keyboard-fill btn ms-1 style-button" (click)="openDialog()">Clavier</button>
         <button type="button" class="bi bi-trash-fill btn ms-1 style-button">Supprimer</button>
         <button type="button" class="bi bi-x-circle-fill btn ms-1 style-button">fermer</button></div>

@@ -3,11 +3,7 @@ import { LoginService } from './../../login.service';
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild,} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { ok } from 'assert';
-=======
 import { RouterLink } from '@angular/router';
->>>>>>> 25e1204b1c890af8be0faabb24cc552143579065
 import Keyboard, { SimpleKeyboard } from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
 import Swal from 'sweetalert2';
@@ -70,16 +66,10 @@ export class HomeComponent implements OnInit{
         icon: 'success',
         title: 'Welcome!',
         showConfirmButton: false,
-<<<<<<< HEAD
-        timer: 500      });
-        
-        this.logIn = true;
-=======
-        timer: 1500      });
-        this.LoginService.setLoggedIn(true);
-
->>>>>>> 25e1204b1c890af8be0faabb24cc552143579065
-    }else {
+        timer: 1500
+      });
+      this.LoginService.setLoggedIn(true);
+    } else {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',

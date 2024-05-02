@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
+=======
+import { environment } from '../../env/env';
+>>>>>>> aziz
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
