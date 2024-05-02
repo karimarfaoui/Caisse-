@@ -1,11 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';  
 @import 'bootstrap-icons/font/bootstrap-icons.css';
-<<<<<<< HEAD
-@import 'simple-keyboard/build/css/index.css';
+
+@import 'simple-keyboard/build/css/index.css'; /* Fix: Add closing curly brace */
 @import 'primeicons/primeicons.css';
-=======
-/* You can add global styles to this file, and also import other style files */
+
 @import "primeicons/primeicons.css";
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
->>>>>>> 25e1204b1c890af8be0faabb24cc552143579065
