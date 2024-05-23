@@ -1,17 +1,14 @@
 <div class="container form">
     <div class="d-flex my-2">
-        <button class="btn btn-lg mx-5 bi bi-arrow-up style-button bare">Bon d'entrée</button>
-        <button class="btn btn-lg mx-5 bi bi-arrow-down style-button bare">Bon de sortie</button>
+        <button class="btn btn-lg mx-5 bi bi-arrow-up style-button bare" (click)="openDialog()">Bon d'entrée</button>
+        <button class="btn btn-lg mx-5 bi bi-arrow-down style-button bare" (click)="openDialog2()">Bon de sortie</button>
     </div>
     <div class="d-flex my-2">
-        <button class="btn btn-lg mx-5 bi bi-list-check style-button bare">Liste des bons d'entré</button>
-        <button class="btn btn-lg mx-5 bi bi-list-check style-button bare">Liste des bons sortie</button>
+        <button class="btn btn-lg mx-5 bi bi-list-check style-button bare" (click)="openDialog1()">Liste des bons d'entré</button>
+        <button class="btn btn-lg mx-5 bi bi-list-check style-button bare" (click)="openDialog3()">Liste des bons sortie</button>
     </div>
     <div class="d-flex my-2">
-        <button class="btn btn-lg mx-5 bi bi-boxes style-button bare">Stock Disponible</button>
-        <button class="btn btn-lg mx-5 bi bi-arrow-repeat style-button bare">RAZ Quantité Stock</button>
+        <button class="btn btn-lg mx-5 bi bi-boxes style-button bare"(click)="openDialog4()">Stock Disponible</button>
+        <button class="btn btn-lg mx-5 bi bi-arrow-repeat style-button bare"(click)="submit()">RAZ Quantité Stock</button>
     </div>
-    <div class="d-flex my-2">
-        <button class="btn btn-lg mx-5 bi bi-arrow-down-up style-button bare">Mouvement Article</button>
-        <button class="btn btn-lg mx-5 bi bi-upc style-button bare">Impression code barre</button>
-    </div>
+    

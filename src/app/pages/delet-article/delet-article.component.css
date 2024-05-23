@@ -1,0 +1,31 @@
+.style-button{
+    background-color: #6c757d ;
+    font-weight: bold;
+    color: black;
+        margin-top: 4px;
+        margin-bottom: 5px;
+    height: 50px;
+}
+.pop{
+    background-color: #343a40;
+    color: white;
+    width: 80vh;
+    height: 200px;
+ 
+}
+.pop div{
+    display: flex;
+    justify-content: center;
+    margin-top:2% ;
+
+}
+input{
+   margin-top: -10px;
+   height: 50px;
+   margin-left: 2%;
+}
+.valid{
+    margin-top: -10px;
+    margin-left: 2%;
+
+}

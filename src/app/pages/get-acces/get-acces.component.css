@@ -1,0 +1,67 @@
+/* General table styles */
+.mat-table {
+    color: #ffffff; /* White text color for contrast */
+    background-color: #222e3c; /* Dark blue-gray background */
+  }
+  
+  /* Header row styles */
+  .mat-header-row {
+    background-color: #1a2330; /* Slightly darker shade for header */
+    color: #ffffff;
+    border-bottom: 1px solid #3a4759; /* Slightly lighter shade for a subtle border */
+  }
+  
+  .mat-header-cell {
+    color: #ffffff;
+    font-weight: bold; /* Make header labels bold */
+  }
+  
+  /* Data row styles */
+  .mat-row {
+    background-color: #222e3c; /* Matching the general table background */
+    color: #ffffff;
+    border-bottom: 1px solid #3a4759; /* Subtle border for each row */
+  }
+  
+  .mat-cell, .mat-footer-cell {
+    color: #ffffff; /* Ensures text in cells is easily readable */
+  }
+  
+  /* Hover state for rows */
+  .mat-row:hover {
+    background-color: #2a3548; /* A lighter shade for hover effect */
+  }
+  
+  /* Paginator styling */
+  .mat-paginator {
+    background-color: #222e3c;
+    color: #ffffff;
+  }
+  
+  .mat-paginator .mat-paginator-range-label {
+    color: #ffffff; /* Color for the range label */
+  }
+  
+  .mat-paginator .mat-select-value {
+    color: #ffffff; /* Color for the page size selector */
+  }
+  
+  .mat-paginator .mat-select-arrow {
+    color: #ffffff; /* Color for the dropdown arrow */
+  }
+  
+  /* Styling for paginator buttons */
+  .mat-paginator button {
+    color: #ffffff; /* Button text color */
+  }
+  
+  .mat-paginator button.mat-icon-button.disabled {
+    color: #5a697f; /* Gray out the button if it is disabled */
+  }
+  
+  /* Tooltips styling */
+  .mat-tooltip {
+    background-color: #3a4759; /* Dark background for tooltips */
+    color: #ffffff; /* Text color for tooltips */
+  }
+

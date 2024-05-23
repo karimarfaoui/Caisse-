@@ -1,0 +1,14 @@
+<div class="">
+
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 mat-table ">
+      <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+        <th mat-header-cell class="mat-header-cell" *matHeaderCellDef mat-sort-header>{{ column }}</th>
+        <td mat-cell class="mat-cell" *matCellDef="let element">{{ element[column] }}</td>
+      </ng-container>
+  
+      <tr mat-header-row class="mat-header-row " *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row class="mat-row" *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator class="mat-tooltip" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+

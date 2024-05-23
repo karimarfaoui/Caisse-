@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import Keyboard, { SimpleKeyboard } from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
 import { CheckboxModule } from 'primeng/checkbox';
+import { MatDialog } from '@angular/material/dialog';
+import { RapportParHeureComponent } from '../../lecture/rapport-par-heure/rapport-par-heure.component';
 
 @Component({
   selector: 'app-lecture',
@@ -22,7 +24,7 @@ showKeyboard() {
   
   keyboard: Keyboard = {} as Keyboard;
   inputValue: string = '';
-
+  constructor(public dialog: MatDialog) { } 
   ngOnInit() {
     this.keyboard = new Keyboard({
       onChange: input => this.onChange(input),
@@ -47,5 +49,10 @@ showKeyboard() {
     this.areItemsVisible = !this.areItemsVisible;
     console.log(this.areItemsVisible);
   }
+
+  openDialog() {
+    this.dialog.open(RapportParHeureComponent);
+  }
+
 
 }

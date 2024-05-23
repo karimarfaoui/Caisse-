@@ -4,11 +4,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import Keyboard, { SimpleKeyboard } from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
 import { CheckboxModule } from 'primeng/checkbox';
-
+import { MatDialog} from '@angular/material/dialog';
+import { BonEntreComponent } from '../../gestion stock/bon-entre/bon-entre.component';
+import { GetBonComponent } from '../../gestion stock/get-bon/get-bon.component';
+import { BonSortieComponent } from '../../gestion stock/bon-sortie/bon-sortie.component';
+import { GetBonsortieComponent } from '../../gestion stock/get-bonsortie/get-bonsortie.component';
+import { ConsultationStockComponent } from '../../gestion stock/consultation-stock/consultation-stock.component';
+import { ArticlesService } from '../../@services/articles.service';
+import { EntreService } from '../../@services/entre.service';
+import { SortieService } from '../../@services/sortie.service';
+import { HttpClientModule } from '@angular/common/http';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-stock',
   standalone: true,
-  imports: [NgIf,CommonModule,FormsModule,ReactiveFormsModule],
+  imports: [NgIf,CommonModule,FormsModule,ReactiveFormsModule,HttpClientModule],
   templateUrl: './stock.component.html',
   styleUrl: './stock.component.css'
 })
@@ -22,7 +32,7 @@ showKeyboard() {
   
   keyboard: Keyboard = {} as Keyboard;
   inputValue: string = '';
-
+  constructor(public dialog: MatDialog,private article: ArticlesService, private entre: EntreService , private sortie: SortieService) { }
   ngOnInit() {
     this.keyboard = new Keyboard({
       onChange: input => this.onChange(input),
@@ -47,6 +57,52 @@ showKeyboard() {
     this.areItemsVisible = !this.areItemsVisible;
     console.log(this.areItemsVisible);
   }
-  
+  resetAllArticles() { 
+    this.article.update().subscribe(posts =>{
+      console.log(posts);
+    });
+  }
+  deleteAllEntre() { 
+    this.entre.deleteAll().subscribe(posts =>{
+      console.log(posts);
+    });
+  }
+  deleteAllSortie() { 
+    this.sortie.deleteAll().subscribe(posts =>{
+      console.log(posts);
+    });
+  }
+
+  submit(){
+    this.deleteAllEntre();
+    this.deleteAllSortie();
+    this.resetAllArticles();
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Stock réinitialisé avec succès',
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+
+  openDialog() {
+    this.dialog.open(BonEntreComponent);
+  }
+  openDialog1() {
+    this.dialog.open(GetBonComponent);
+  }
+
+  openDialog2() {
+    this.dialog.open(BonSortieComponent);
+  }
+
+  openDialog3() {
+    this.dialog.open(GetBonsortieComponent);
+  }
+  openDialog4() {
+    this.dialog.open(ConsultationStockComponent);
+  }
+
 
 }
